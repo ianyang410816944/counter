@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         txv.text = counter.toString()
     }
     fun Add(v:View){
-        if(v.id == R.id.btn2){
+        //if(v.id == R.id.btn2){
+        if(v == btn2){
             counter++
         }
         else{
