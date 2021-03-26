@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
+class MainActivity : AppCompatActivity(),View.OnClickListener,View.OnLongClickListener {
 
 
     var counter:Int=0;
@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         btn2.setOnClickListener(this)
         btn3.setOnClickListener(this)
         btn4.setOnClickListener(this)
+        txv.setOnLongClickListener(this)
+        img.setOnLongClickListener(this)
 
         btnHappy.setOnClickListener(object:View.OnClickListener{
             override fun onClick(v: View?) {
@@ -29,18 +31,34 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
         })
 
+
+
+
+    }
+
+    override fun onLongClick(v: View?): Boolean {
+        if(v==txv) {
+            counter += 2
+        }
+        else{
+            counter--
+        }
+        txv.text = counter.toString()
+        return true
     }
 
 
-    override fun onClick(v: View?) {
+
+    override fun onClick(v: View?){
         if(v==btn2){
             counter++
         }else if(v==btn3){
             counter +=2
         }
-        else{
+        else if(v==btn4){
             counter = 0
         }
+
         txv.text = counter.toString()
     }
 }

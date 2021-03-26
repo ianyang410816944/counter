@@ -23,15 +23,31 @@
         android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="Add"
         android:text="加一" />
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="Add"
         android:text="加二" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="歸零" />
+
+    <Button
+        android:id="@+id/btnHappy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="樂透" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/apicture" />
 
 
 </LinearLayout>
